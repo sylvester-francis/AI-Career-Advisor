@@ -49,7 +49,7 @@
 
 ---
 ## 📸 Demo
-[![Watch the demo](screenshots/DarkmodeSS.png)](https://youtube.com/shorts/ILq4P6QEFdE?feature=share)
+[![Watch the demo]](https://youtube.com/shorts/ILq4P6QEFdE?feature=share)
 
 
 ## 🚀 Getting Started
@@ -120,3 +120,5 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 Developed by [Sylvester Ranjith Francis](https://github.com/sylvester-francis)
 
 Feel free to reach out or connect on [LinkedIn](https://www.linkedin.com/in/sylvesterranjith/) for collaboration or feedback!
+
+[![Subscribe](https://img.shields.io/badge/Subscribe-red?logo=youtube&style=for-the-badge)](https://www.youtube.com/channel/UCMa9FTkwqw3W4YRiUi8x8kA?sub_confirmation=1)
