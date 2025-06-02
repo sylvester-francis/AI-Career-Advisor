@@ -57,8 +57,8 @@
 ### Clone the Repo
 
 ```bash
-git clone https://github.com/sylvester-francis/my-career-bot.git
-cd my-career-bot
+git clone https://github.com/sylvester-francis/AI-Career-Advisor.git
+cd AI-Career-Advisor
 ```
 
 ### Add Gemini API Key
