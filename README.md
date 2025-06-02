@@ -49,7 +49,7 @@
 
 ---
 ## 📸 Demo
-[![Watch the demo](https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[![Watch the demo](screenshots/DarkmodeSS.png)](https://youtube.com/shorts/ILq4P6QEFdE?feature=share)
 
 
 ## 🚀 Getting Started
