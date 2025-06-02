@@ -1,6 +1,14 @@
 
 # 🤖 Career Bot
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" />
+  <img src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=android&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gemini%20API-ffcc00?style=for-the-badge&logo=google&logoColor=black" />
+  <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" />
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+</p>
+
 **Career Bot** is a GenAI-powered career Q&A assistant built using **Kotlin** and **Jetpack Compose**. It helps users navigate their career paths by answering questions related to jobs, interviews, resumes, skills, and personal growth.
 
 > Think of it as your personal career coach — available anytime on your Android device.
