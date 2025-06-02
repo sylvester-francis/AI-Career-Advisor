@@ -23,7 +23,7 @@
 - 🎨 **Clean Jetpack Compose UI**  
   Built entirely with Jetpack Compose for a modern, responsive interface.
 
-- 📝 **Markdown Support for AI Responses(Pending implementation)**  
+- 📝 **Markdown Support for AI Responses**  
   Rich text formatting (bold, italics, lists, links) for a natural and readable chat experience.
 
 - 💬 **Chat-Style Interface**  
@@ -44,7 +44,13 @@
 
 ![Light Mode](screenshots/LightmodeSS.png)
 
+### App Responses
+![Response](screenshots/ResponseSS.png)
+
 ---
+## 📸 Demo
+[![Watch the demo](https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
 
 ## 🚀 Getting Started
 
