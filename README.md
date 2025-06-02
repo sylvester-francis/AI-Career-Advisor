@@ -1,5 +1,5 @@
 
-# 🤖 Career Bot
+# 🤖 AI Career Bot/Advisor
 
 <p align="center">
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" />
@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
 </p>
 
-**Career Bot** is a GenAI-powered career Q&A assistant built using **Kotlin** and **Jetpack Compose**. It helps users navigate their career paths by answering questions related to jobs, interviews, resumes, skills, and personal growth.
+**Career Bot/Advisor** is a GenAI-powered career Q&A assistant built using **Kotlin** and **Jetpack Compose**. It helps users navigate their career paths by answering questions related to jobs, interviews, resumes, skills, and personal growth.
 
 > Think of it as your personal career coach — available anytime on your Android device.
 
