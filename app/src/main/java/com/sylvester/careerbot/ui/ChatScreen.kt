@@ -30,10 +30,11 @@ import kotlinx.coroutines.launch
 import com.sylvester.careerbot.data.Message
 import com.sylvester.careerbot.data.MessageType
 import com.sylvester.careerbot.viewmodel.ChatViewModel
+import com.sylvester.careerbot.ui.components.MessageBubble
+import com.sylvester.careerbot.ui.components.BotAvatar
+import com.sylvester.careerbot.ui.components.UserAvatar
 import androidx.lifecycle.viewmodel.compose.viewModel
 import kotlinx.coroutines.delay
-import java.text.SimpleDateFormat
-import java.util.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -257,83 +258,6 @@ fun WelcomeScreen() {
 }
 
 @Composable
-fun MessageBubble(message: Message) {
-    val isUser = message.type == MessageType.USER
-    val bubbleColor = if (isUser) {
-        MaterialTheme.colorScheme.primary
-    } else {
-        MaterialTheme.colorScheme.secondaryContainer
-    }
-    val textColor = if (isUser) {
-        MaterialTheme.colorScheme.onPrimary
-    } else {
-        MaterialTheme.colorScheme.onSecondaryContainer
-    }
-
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = if (isUser) Arrangement.End else Arrangement.Start
-    ) {
-        if (!isUser) {
-            Icon(
-                Icons.Default.Computer,
-                contentDescription = "Bot",
-                modifier = Modifier
-                    .size(32.dp)
-                    .clip(CircleShape)
-                    .background(MaterialTheme.colorScheme.primaryContainer)
-                    .padding(4.dp),
-                tint = MaterialTheme.colorScheme.onPrimaryContainer
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-        }
-
-        Column(
-            modifier = Modifier.widthIn(max = 280.dp),
-            horizontalAlignment = if (isUser) Alignment.End else Alignment.Start
-        ) {
-            Card(
-                colors = CardDefaults.cardColors(containerColor = bubbleColor),
-                shape = RoundedCornerShape(
-                    topStart = 16.dp,
-                    topEnd = 16.dp,
-                    bottomStart = if (isUser) 16.dp else 4.dp,
-                    bottomEnd = if (isUser) 4.dp else 16.dp
-                )
-            ) {
-                Text(
-                    text = message.content,
-                    color = textColor,
-                    modifier = Modifier.padding(12.dp),
-                    style = MaterialTheme.typography.bodyMedium
-                )
-            }
-
-            Text(
-                text = formatTimestamp(message.timestamp),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
-            )
-        }
-
-        if (isUser) {
-            Spacer(modifier = Modifier.width(8.dp))
-            Icon(
-                Icons.Default.Person,
-                contentDescription = "User",
-                modifier = Modifier
-                    .size(32.dp)
-                    .clip(CircleShape)
-                    .background(MaterialTheme.colorScheme.tertiaryContainer)
-                    .padding(4.dp),
-                tint = MaterialTheme.colorScheme.onTertiaryContainer
-            )
-        }
-    }
-}
-
-@Composable
 fun ChatInputBar(
     input: String,
     onInputChange: (String) -> Unit,
@@ -405,33 +329,44 @@ fun TypingIndicator() {
 
     Row(
         horizontalArrangement = Arrangement.spacedBy(4.dp),
+        verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.padding(start = 40.dp, top = 8.dp)
     ) {
-        repeat(3) { index ->
-            val animationDelay = index * 100
-            val alpha by infiniteTransition.animateFloat(
-                initialValue = 0.3f,
-                targetValue = 1f,
-                animationSpec = infiniteRepeatable(
-                    animation = tween(600, delayMillis = animationDelay),
-                    repeatMode = RepeatMode.Reverse
-                ),
-                label = "dot_$index"
-            )
+        BotAvatar()
+        Spacer(modifier = Modifier.width(8.dp))
 
-            Box(
-                modifier = Modifier
-                    .size(8.dp)
-                    .clip(CircleShape)
-                    .background(
-                        MaterialTheme.colorScheme.primary.copy(alpha = alpha)
+        Card(
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.secondaryContainer
+            ),
+            shape = RoundedCornerShape(16.dp)
+        ) {
+            Row(
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+                horizontalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
+                repeat(3) { index ->
+                    val animationDelay = index * 100
+                    val alpha by infiniteTransition.animateFloat(
+                        initialValue = 0.3f,
+                        targetValue = 1f,
+                        animationSpec = infiniteRepeatable(
+                            animation = tween(600, delayMillis = animationDelay),
+                            repeatMode = RepeatMode.Reverse
+                        ),
+                        label = "dot_$index"
                     )
-            )
+
+                    Box(
+                        modifier = Modifier
+                            .size(8.dp)
+                            .clip(CircleShape)
+                            .background(
+                                MaterialTheme.colorScheme.onSecondaryContainer.copy(alpha = alpha)
+                            )
+                    )
+                }
+            }
         }
     }
-}
-
-private fun formatTimestamp(timestamp: Long): String {
-    val sdf = SimpleDateFormat("HH:mm", Locale.getDefault())
-    return sdf.format(Date(timestamp))
 }

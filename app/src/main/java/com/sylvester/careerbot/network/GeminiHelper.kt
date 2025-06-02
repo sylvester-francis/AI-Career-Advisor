@@ -52,13 +52,20 @@ private fun buildCareerPrompt(userInput: String): String {
         1. Provide specific, actionable advice
         2. Be encouraging and supportive
         3. Use clear, professional language
-        4. Format responses with bullet points when listing items
+        4. Format your responses using Markdown for better readability:
+           - Use **bold** for key points and important terms
+           - Use *italics* for emphasis
+           - Use bullet points (- or *) for lists
+           - Use numbered lists (1. 2. 3.) for step-by-step instructions
+           - Use ### for section headers when organizing longer responses
+           - Use `code formatting` for technical terms or specific phrases to highlight
         5. Keep responses concise but comprehensive
         6. Ask clarifying questions when needed
+        7. Structure longer responses with clear sections
         
         User Question: "$userInput"
         
-        Please provide helpful career advice:
+        Please provide helpful career advice with proper formatting:
     """.trimIndent()
 }
 
