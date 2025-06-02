@@ -111,6 +111,6 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## 🧑‍💻 Author
 
-Developed with ❤️ by [Sylvester Ranjith Francis](https://github.com/sylvester-francis)
+Developed by [Sylvester Ranjith Francis](https://github.com/sylvester-francis)
 
 Feel free to reach out or connect on [LinkedIn](https://www.linkedin.com/in/sylvesterranjith/) for collaboration or feedback!
